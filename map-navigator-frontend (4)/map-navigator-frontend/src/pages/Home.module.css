@@ -1,0 +1,104 @@
+.hero {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: #1f1f1f;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #61dafb;
+  color: #121212;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: repeat;
+  z-index: 0;
+}
+
+.stars {
+  background-image: radial-gradient(1px 1px at 20% 30%, #fff 20%, transparent 100%);
+  animation: starAnim 100s linear infinite;
+  background-size: 1000px 1000px;
+}
+
+.stars2 {
+  background-image: radial-gradient(1px 1px at 40% 60%, #ccc 20%, transparent 100%);
+  animation: starAnim 150s linear infinite;
+  background-size: 800px 800px;
+}
+
+.stars3 {
+  background-image: radial-gradient(1px 1px at 60% 80%, #888 20%, transparent 100%);
+  animation: starAnim 200s linear infinite;
+  background-size: 600px 600px;
+}
+
+@keyframes starAnim {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+/* Add these inside .hero to stack content above stars */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}

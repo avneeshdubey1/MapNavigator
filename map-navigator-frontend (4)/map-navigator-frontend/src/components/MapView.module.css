@@ -1,0 +1,48 @@
+.mapViewContainer {
+    background-color: #121212;
+    color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+  }
+  
+  .controls select,
+  .controls button {
+    padding: 0.5rem 1rem;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .controls select:hover,
+  .controls button:hover {
+    background-color: #333;
+  }
+  
+  .controls button {
+    cursor: pointer;
+  }
+  
+  .estimatedTime {
+    margin-left: auto;
+    font-weight: bold;
+    color: #00ffff;
+  }
+  
+  .mapContainer {
+    flex-grow: 1;
+    height: 100%;
+  }
+  
